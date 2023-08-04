@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,500&family=Nunito+Sans:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     font-family: 'Barlow', sans-serif;
+         font-size: 25px;
+     
+}
+
+
+ul {
+    list-style: none; 
+    padding: 0;
+}
+
+
+ul li {
+    position: relative;
+    padding-left: 40px; 
+    margin-bottom: 10px; 
+
+    
+    &::before {
+        content: '\f00c'; 
+        font-family: 'Font Awesome'; 
+        position: absolute;
+        top: 50%; 
+        left: 0;
+        transform: translate(0, -50%); 
+        font-size: 18px; 
+        color: #153677; 
+    }
+
+    
+    &.checked::before {
+        content: '\f14a'; 
+        color: #50C878; 
+    }
+}
+
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #153677;
+    padding: 10px;
+}
+
+
+.todo-app {
+    width: 100%;
+    max-width: 640px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+
+#todo-form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 8px;
+    background: #153677;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
